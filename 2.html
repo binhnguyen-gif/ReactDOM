@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Js</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Add React to website</h1>
+
+    <!-- 1.Github(lưu trữ mã nguồn), 
+        NPMJS(node package manager) lưu trữ sản phẩm xây dựng ra từ mã nguồn, 
+        UNPKG (lấy được những libary được từ NPM dưới dạng cdn(mạng lớn các máy chủ định tuyến các máy chủ gần nhất ) url)
+    2. add react to website
+    3. official docs -->
+
+    <!-- 1. React.createElemetn() ->react element
+        2. So sánh với document.createElement() ->DOM element
+        3. thay đổi : id,className, style, ...
+        4. Thêm text, html
+        5. Tạo
+    -->
+
+    <!-- <h1 title="Hello" class="heading">Hello guys!</h1> -->
+    <script>
+        // React
+        // React.createElement(type, props, children, n)
+        // children cũng là một props
+      const h1React = React.createElement(
+        "h1",
+        {
+          title: "Hello",
+          className: "heading",
+        },
+        "Hello guys!"
+      );
+      console.log(h1React);
+    //   React DOM mới render ra
+    </script>
+    <!-- 6. Tạo:
+    <ul>
+        <li>Javascript</li>
+        <li>React Js</li>
+    </ul> -->
+    <script>
+        // React
+        // React.createElement(type, props, children, n)
+        // children cũng là một props
+      const ulReact = React.createElement(
+        "ul",
+        null,
+        React.createElement('li', null, 'Javascript'),
+        React.createElement('li', null, 'React Js'),
+      );
+      console.log(h1React);
+    //   React DOM mới render ra
+    </script>
+    <!-- 7. Tạo: 
+    <div class="post-item">
+        <h2 title="Học react ại f8">React Js</h2>
+        <p>Học react từ cơ bản</p>
+    </div> -->
+
+    
+  </body>
+</html>

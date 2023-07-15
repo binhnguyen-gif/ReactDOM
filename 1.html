@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React js</title>
+  </head>
+  <body>
+    <!-- 1. document.createElemetn()
+        2. document.body.appendChild()
+        3. console.dir()
+        4. innnertText, id, className, style 
+    -->
+    <h1 id="heading">Hello guys!</h1>
+
+    <script>
+        const h1 = document.querySelector('#heading');
+// in ra 1 object
+// dùng console.dir() để kiểm tra
+        console.log(h1);
+        console.dir(h1);
+    </script>
+
+    <script>
+        // Cách react render ra giao diện người dùng khi lúc đầu chỉ có thẻ id rôt
+        const h2 = document.createElement('h1');
+        h2.innerText = 'hello guys!';
+        h2.id = 'heading';
+        h2.className = 'heading class2'; // có sẵn trên dom
+        h2.style.color = 'red';
+        h2.style = 'color: green';
+        Object.assign(h1.style, {
+            color: 'blue',
+            backgroundColor: 'red'
+        });
+
+        console.log(h2);
+
+        document.body.appendChild(h2);
+    </script>
+    <!-- vd 2 -->
+
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root');
+        console.log('test', h2)
+        root.appendChild(h2);
+    </script>
+  </body>
+</html>
