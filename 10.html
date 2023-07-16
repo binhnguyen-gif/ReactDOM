@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React element types</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- 
+       Làm việc với JSX
+
+       Phần I.
+       - Xử lý DOM events
+       - Component do chúng ta định nghĩa phải viết in hoa kí tự đầu
+       -Chọn component trong 1 object
+       - Booleans, Null & Undefined không được render
+       - Kết hợp toán tử logic để render theo điều kiện
+       Phần II
+       - Props trong JSX
+       - <YourComponent 
+            propName1="string literals"
+            propName2={expression}
+            />
+        - Props default to "true"
+        - Spread/Rest props
+        - Children prop
+        - Render props
+
+     -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      //   const Form = {
+      //     Input() {
+      //       return <input />;
+      //     },
+      //     Checkbox() {
+      //       return <input type="checkbox" />;
+      //     },
+      //   };
+
+      //   function App() {
+
+      //     const type = 'Input';
+      //     console.log(Form);
+
+      //     const Component = Form[type];
+      //     return (
+      //       <div id="wrapper">
+      //         <Component />
+      //       </div>
+      //     );
+      //   }
+
+      function Button({ title, href, onClick }) {
+        let Component = "button";
+        const props = {};
+
+        if(href) {
+            Component = 'a'
+            props.href = href
+        }
+
+        if (onClick) {
+          props.onClick = onClick;
+          console.log(props)
+        }
+
+        return <Component {...props}>{title}</Component>;
+      }
+
+      function App() {
+        return (
+          <div id="wrapper">
+            <Button
+              title="Clicl me!"
+              href="dddddddddddddddddddddddd"
+            //   onClick={() => console.log(Math.random())}
+            />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
