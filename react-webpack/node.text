@@ -1,0 +1,32 @@
+link install : webpack : https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html
+ESlint dùng để validation code khi chạy báo lỗi
+
+update version webpack : npm i react@latest react-dom@latest
+npm i react@17.0.2 react-dom@17.0.2
+
+Sự khác nhau cơ bản của YARN và NPM: 
+      Yarn cài các thư viện cùng lúc ->
+      nhanh hơn 
+      NPM cài tuần tự các thư viện -> chậm hơn chút 
+      Yarn lưu các gói trong một bộ nhớ tạm, khi nào xoá thì mà muốn cài lại thì lấy ra dùng ->
+      tốn dung lượng 
+      NPM xoá rồi thì tải lại xài Câu lệnh dùng giống nhau, chỉ
+      khác là npm dùng npm i... yarn dùng yarn i... Cài nodeJS rồi thì có thể
+      dùng npm ngay lập tức, còn Yarn đòi hỏi cài riêng. Yarn thường đồng bộ hoá
+      các gói phụ thuộc, nên khi nào muốn cài đặt hoặc cập nhập thì nó sẽ tìm
+      cách giữ nguyên gói cũ và chỉ cập nhập khi gói mới có sự thay đổi. Còn npm
+      không có cái này.
+
+Cấu trúc thư mục dự án
+- public (tất cả các file trong thư mục public đều truy cập được thông qua url)
+- manifest.json : khai báo thông tin web thường được sử dụng để khai báo cho trình duyệt hiểu trong trường hợp phát triển web PWA  ()
+- robots.txt : file hướng dẫn công cụ tìm kiếm 
+- build : để deploy lên trên hosting npm install -g serve
+: serve -s build
+-reportWebVitals.js : thống kê báo cáo , giúp công cụ tìm kiếm , có thể gửi lên google al
+- Hook : gắn vào => là method là hàm 
+-customize-cra  ghi đè cấu hình webpack mà không phải eject
+
+-Cài đặt và cấu hình Prettier : giúp code dễ đọc 
+
+npm i -D sass
